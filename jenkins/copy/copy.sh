@@ -9,7 +9,7 @@ WORKSPACE=/var/jenkins_home/workspace/Arrowhead/Arrowhead_Core_Spring
 
 # Service Registry
 rm -f $WORKSPACE/serviceregistry/src/main/resources/application.properties
-cp -f /var/core_system_config/service_registry.properties $WORKSPACE/serviceregistry/src/main/resources/application.properties
+cp -f /var/core_system_config/serviceregistry.properties $WORKSPACE/serviceregistry/src/main/resources/application.properties
 
 # Authorization
 rm -f $WORKSPACE/authorization/src/main/resources/application.properties
