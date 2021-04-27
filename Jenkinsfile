@@ -5,10 +5,8 @@ pipeline
     environment
     {
         DOCKER_REPO_URL = "${env.DOCKER_REPO}"
-        NAMESPACE = "${env.DOCKER_BUILD_NAMESPACE}"
         DOCKER_USER = "${env.DOCKER_USER}"
-        DOCKER_USER_NAMESPACE = "${env.DOCKER_USER_NAMESPACE}"
-        DOCKER_PASS = credentials('portus-push-password')
+        DOCKER_PASS = credentials('dockerhub')
     }
 
 	stages
