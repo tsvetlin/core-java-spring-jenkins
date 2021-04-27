@@ -1,6 +1,6 @@
 pipeline
 {
-	agent none
+	agent { label "master" }
 
     environment
     {
@@ -13,7 +13,6 @@ pipeline
 	{
 		stage( "Create Maven Cache" )
 			{
-				agent{ label "master" }
 				steps
 				{
 					sh " docker volume create maven-repo "
@@ -22,7 +21,6 @@ pipeline
 
 		stage( "Test" )
             {
-                agent { label "master" }
                 steps
                 {
                     sh '''
@@ -34,7 +32,6 @@ pipeline
 
 		stage( "Build" )
 			{
-				agent { label "master" }
 				steps
 				{
 					sh  '''
@@ -47,7 +44,6 @@ pipeline
 			}
 		stage( "Push" )
         	{
-        		agent { label "master" }
         	    steps
         		{
                     sh './jenkins/push/push.sh'
@@ -55,7 +51,6 @@ pipeline
         	}
         stage( "Deploy" )
             {
-            	agent { label "master" }
                 steps
            		{
                     sh 'echo Deploy'
