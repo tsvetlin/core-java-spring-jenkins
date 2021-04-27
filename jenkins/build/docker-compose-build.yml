@@ -30,6 +30,26 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_EH
+  certificate-authority:
+    image: "certificate-authority:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_CA
+  deviceregistry:
+    image: "deviceregistry:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_DR
+  systemregistry:
+    image: "systemregistry:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_SYSR
+  choreographer:
+    image: "choreographer:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_CHOR              
 
 
 

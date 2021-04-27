@@ -38,6 +38,26 @@ mkdir $WORKSPACE/jenkins/build/eventhandler
 cp -f $WORKSPACE/eventhandler/target/*.jar $WORKSPACE/jenkins/build/eventhandler
 # cp -f eventhandler/target/*.properties jenkins/build/eventhandler
 
+# Copy the Certificate Authority jar to the build location
+rm -rf $WORKSPACE/jenkins/build/certificate-authority
+mkdir $WORKSPACE/jenkins/build/certificate-authority
+cp -f $WORKSPACE/certificate-authority/target/*.jar $WORKSPACE/jenkins/build/certificate-authority
+
+# Copy the Device Registry jar the build location
+rm -rf $WORKSPACE/jenkins/build/deviceregistry
+mkdir $WORKSPACE/jenkins/build/deviceregistry
+cp -f $WORKSPACE/deviceregistry/target/*.jar $WORKSPACE/jenkins/build/deviceregistry
+
+# Copy the System Registry jar to the build location
+rm -rf $WORKSPACE/jenkins/build/systemregistry
+mkdir $WORKSPACE/jenkins/build/systemregistry
+cp -f $WORKSPACE/systemregistry/target/*.jar $WORKSPACE/jenkins/build/systemregistry
+
+# Copy the Choreographer jar to the build location
+rm -rf $WORKSPACE/jenkins/build/cchoreographer
+mkdir $WORKSPACE/jenkins/build/choreographer
+cp -f $WORKSPACE/choreographer/target/*.jar $WORKSPACE/jenkins/build/choreographer
+
 echo "****************************"
 echo "** Building Docker Images **"
 echo "****************************"
