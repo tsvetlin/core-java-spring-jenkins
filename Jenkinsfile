@@ -6,7 +6,7 @@ pipeline
     {
         DOCKER_REPO_URL = "${env.DOCKER_REPO}"
         DOCKER_USER = "${env.DOCKER_USER}"
-        DOCKER_PASS = credentials('dockerhub')
+        DOCKER_PASS = credentials('dockerhub-pass')
     }
 
 	stages
