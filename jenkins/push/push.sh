@@ -4,7 +4,7 @@ echo "****************************"
 echo "******** Logging in ********"
 echo "****************************"
 
-docker login $DOCKER_REPO_URL -u $DOCKER_USER -p $DOCKER_PASS
+docker login -u $DOCKER_USER -p $DOCKER_PASS
 
 echo "****************************"
 echo "****** Tagging images ******"
@@ -20,7 +20,8 @@ docker tag certificate-authority:$BUILD_TAG $DOCKER_USER/certificate-authority:$
 docker tag deviceregistry:$BUILD_TAG $DOCKER_USER/deviceregistry:$BUILD_TAG
 docker tag systemregistry:$BUILD_TAG $DOCKER_USER/systemregistry:$BUILD_TAG
 docker tag choreographer:$BUILD_TAG $DOCKER_USER/choreographer:$BUILD_TAG
-
+docker tag datamanager:$BUILD_TAG $DOCKER_USER/datamanager:$BUILD_TAG
+docker tag translator:$BUILD_TAG $DOCKER_USER/translator:$BUILD_TAG
 
 docker tag serviceregistry:$BUILD_TAG $DOCKER_USER/serviceregistry:latest
 docker tag authorization:$BUILD_TAG $DOCKER_USER/authorization:latest
@@ -32,6 +33,8 @@ docker tag certificate-authority:$BUILD_TAG $DOCKER_USER/certificate-authority:l
 docker tag deviceregistry:$BUILD_TAG $DOCKER_USER/deviceregistry:latest
 docker tag systemregistry:$BUILD_TAG $DOCKER_USER/systemregistry:latest
 docker tag choreographer:$BUILD_TAG $DOCKER_USER/choreographer:latest
+docker tag datamanager:$BUILD_TAG $DOCKER_USER/datamanager:latest
+docker tag translator:$BUILD_TAG $DOCKER_USER/translator:latest
 
 echo "****************************"
 echo "** Pushing images to Repo **"
@@ -47,6 +50,8 @@ docker push $DOCKER_USER/certificate-authority:$BUILD_TAG
 docker push $DOCKER_USER/deviceregistry:$BUILD_TAG
 docker push $DOCKER_USER/systemregistry:$BUILD_TAG
 docker push $DOCKER_USER/choreographer:$BUILD_TAG
+docker push $DOCKER_USER/datamanager:$BUILD_TAG
+docker push $DOCKER_USER/translator:$BUILD_TAG
 
 docker push $DOCKER_USER/serviceregistry:latest
 docker push $DOCKER_USER/authorization:latest
@@ -58,3 +63,5 @@ docker push $DOCKER_USER/certificate-authority:latest
 docker push $DOCKER_USER/deviceregistry:latest
 docker push $DOCKER_USER/systemregistry:latest
 docker push $DOCKER_USER/choreographer:latest
+docker push $DOCKER_USER/datamanager:latest
+docker push $DOCKER_USER/translator:latest

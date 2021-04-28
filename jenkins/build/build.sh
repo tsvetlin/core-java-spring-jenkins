@@ -54,9 +54,19 @@ mkdir $WORKSPACE/jenkins/build/systemregistry
 cp -f $WORKSPACE/systemregistry/target/*.jar $WORKSPACE/jenkins/build/systemregistry
 
 # Copy the Choreographer jar to the build location
-rm -rf $WORKSPACE/jenkins/build/cchoreographer
+rm -rf $WORKSPACE/jenkins/build/choreographer
 mkdir $WORKSPACE/jenkins/build/choreographer
 cp -f $WORKSPACE/choreographer/target/*.jar $WORKSPACE/jenkins/build/choreographer
+
+# Copy the Datamanager jar to the build location
+rm -rf $WORKSPACE/jenkins/build/datamanager
+mkdir $WORKSPACE/jenkins/build/datamanager
+cp -f $WORKSPACE/datamanager/target/*.jar $WORKSPACE/jenkins/build/datamanager
+
+# Copy the Translator jar to the build location
+rm -rf $WORKSPACE/jenkins/build/translator
+mkdir $WORKSPACE/jenkins/build/translator
+cp -f $WORKSPACE/translator/target/*.jar $WORKSPACE/jenkins/build/translator
 
 echo "****************************"
 echo "** Building Docker Images **"

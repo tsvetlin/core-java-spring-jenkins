@@ -1,0 +1,5 @@
+FROM openjdk:11-jre-slim
+
+COPY datamanager/*.jar /datamanager/arrowhead-datamanager.jar
+
+CMD cd /datamanager && java -jar arrowhead-datamanager.jar

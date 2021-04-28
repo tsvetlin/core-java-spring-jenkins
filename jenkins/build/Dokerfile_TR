@@ -1,0 +1,5 @@
+FROM openjdk:11-jre-slim
+
+COPY translator/*.jar /translator/arrowhead-translator.jar
+
+CMD cd /translator && java -jar arrowhead-translator.jar

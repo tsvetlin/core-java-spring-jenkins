@@ -49,7 +49,17 @@ services:
     image: "choreographer:$BUILD_TAG"
     build:
       context: .
-      dockerfile: Dockerfile_CHOR              
+      dockerfile: Dockerfile_CHOR
+  datamanager:
+    image: "datamanager:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_DM
+  translator:
+    image: "translator:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_TR                     
 
 
 

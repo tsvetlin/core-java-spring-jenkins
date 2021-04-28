@@ -46,3 +46,11 @@ cp -f /var/core_system_config/systemregistry.properties $WORKSPACE/systemregistr
 # Choreographer
 rm -f $WORKSPACE/choreographer/src/main/resources/application.properties
 cp -f /var/core_system_config/choreographer.properties $WORKSPACE/choreographer/src/main/resources/application.properties
+
+# Datamanager
+rm -f $WORKSPACE/datamanager/src/main/resources/application.properties
+cp -f /var/core_system_config/datamanager.properties $WORKSPACE/datamanager/src/main/resources/application.properties
+
+# Translator
+rm -f $WORKSPACE/translator/src/main/resources/application.properties
+cp -f /var/core_system_config/translator.properties $WORKSPACE/translator/src/main/resources/application.properties
