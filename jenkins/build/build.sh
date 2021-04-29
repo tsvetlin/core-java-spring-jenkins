@@ -43,6 +43,11 @@ rm -rf $WORKSPACE/jenkins/build/certificate-authority
 mkdir $WORKSPACE/jenkins/build/certificate-authority
 cp -f $WORKSPACE/certificate-authority/target/*.jar $WORKSPACE/jenkins/build/certificate-authority
 
+# Copy the Onboarding Controller jar to the build location
+rm -rf $WORKSPACE/jenkins/build/onboarding-controller
+mkdir $WORKSPACE/jenkins/build/onboarding-controller
+cp -f $WORKSPACE/onboarding/target/*.jar $WORKSPACE/jenkins/build/onboarding-controller
+
 # Copy the Device Registry jar the build location
 rm -rf $WORKSPACE/jenkins/build/deviceregistry
 mkdir $WORKSPACE/jenkins/build/deviceregistry

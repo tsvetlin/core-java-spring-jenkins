@@ -38,4 +38,4 @@ wrapper
 /deb-installer/.settings
 deviceregistry/bin
 
-*/.DS_Store
+/**/.DS_Store
