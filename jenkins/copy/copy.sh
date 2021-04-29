@@ -35,6 +35,10 @@ cp -f /var/core_system_config/eventhandler.properties $WORKSPACE/eventhandler/sr
 rm -f $WORKSPACE/certificate-authority/src/main/resources/application.properties
 cp -f /var/core_system_config/certificateauthority.properties $WORKSPACE/certificate-authority/src/main/resources/application.properties
 
+# Onboarding Controller
+rm -f $WORKSPACE/onboarding/src/main/resources/application.properties
+cp -f /var/core_system_config/onboardingcontroller.properties $WORKSPACE/onboarding/src/main/resources/application.properties
+
 # Device Registry
 rm -f $WORKSPACE/deviceregistry/src/main/resources/application.properties
 cp -f /var/core_system_config/deviceregistry.properties $WORKSPACE/deviceregistry/src/main/resources/application.properties

@@ -35,6 +35,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile_CA
+  onboarding-controller:
+    image: "onboarding-controller:$BUILD_TAG"
+    build:
+      context: .
+      dockerfile: Dockerfile_OC    
   deviceregistry:
     image: "deviceregistry:$BUILD_TAG"
     build:
